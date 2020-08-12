@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		
+		
+		
+			<title>NFL Game Pass | Replay Every NFL Game of the Season</title>
+			<meta name="description" content="Watch live NFL Preseason games, replay all 256 regular season games and listen to live gameday radio broadcasts with NFL Game Pass." />
+			<meta name="keywords" content="NFL gamepass, gamepass, NFL Game Pass, Game Pass, Nfl.com Game Pass, live preseason games, NFL archived games, NFL games on-demand, NFL games on demand, NFL Game Rewind, Game Rewind, NFL games online, NFL game archive, NFL Preseason live, NFL pre-season live, live NFL preseason, Preseason live, NFL preseason games, NFL Films archive, NFL Playoffs replay, Super Bowl archive, Super Bowl replay, NFL condensed games, NFL live audio, watch live preseason" />
+		
+		
+	
+	
+	<meta name="application-name" content="NFL Game Pass" />
+<!-- 	<meta name="msapplication-TileColor" content="#012D5C" />
+	<meta name="msapplication-TileImage" content="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site/images/wintile.png" />
+	<link rel="shortcut icon" href="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site/images/favicon.ico" />
+	<meta property="og:url" content="https://gamepass.nfl.com/" /> -->
+	
+		
+		
+		
+			<meta property="og:title" content="NFL Game Pass | Replay Every NFL Game of the Season" />
+			<meta property="og:description" content="Watch live NFL Preseason games, replay all 256 regular season games and listen to live gameday radio broadcasts with NFL Game Pass." />
+			<meta name="twitter:description" content="Watch live NFL Preseason games, replay all 256 regular season games and listen to live gameday radio broadcasts with NFL Game Pass." />
+		
+		
+	
+	<meta property="og:image" content="http://www.nfl.com/static/content/public/photo/2017/06/14/0ap3000000815270.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@NFLGamePass" />
+	<meta name="twitter:title" content="NFL Game Pass" />
+	<meta name="twitter:image:src" content="http://www.nfl.com/static/content/public/photo/2017/06/14/0ap3000000815270.jpg" />
+	<link rel="stylesheet" type="text/css" href="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/styles/grid.css" />
+	<link rel="stylesheet" type="text/css" href="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/styles/master.css" />
+	<link rel="stylesheet" type="text/css" href="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/styles/common.css" />
+	
+		<link rel="stylesheet" type="text/css" href="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/base/site/styles/chromecast.css" />
+	
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/libs/jquery-1.10.2.min.js"></script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/libs/jquery.cookie.js"></script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/libs/handlebars.min.js"></script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/libs/popupdismiss.js"></script>
+	<script>
+		var LOC_SERVER = "https://gamepass.nfl.com/";
+		var LOC_RESOURCE = "https://neulionms-a.akamaihd.net/nfl/gamepass/v2/";
+		var LOC_CONTENT = "https://neulionsmbnyc-a.akamaihd.net/u/nfl/nfl/thumbs/";
+		var SITE_ID = "nflgp";
+		var SOLR_PROGRAM = "https://neulionsc2-a.akamaihd.net/solr/nfl_program/";
+		var SOLR_CATEGORY = "";
+		var CDN_CONFIG = "https://neulionsmbnyc-a.akamaihd.net/u/nfl/nfl/";
+		var skuSubs = "";
+		
+
+		
+		
+	</script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/config.js"></script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/common.js"></script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/master.js"></script>
+	<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/base/reg/scripts/common.js"></script>
+
+	
+		<link rel="stylesheet" type="text/css" href="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/styles/packages.css" />
+		
+
+
+<script src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/scripts/header.js"></script>
+<header >
+	<div class="container">
+		<a href="https://gamepass.nfl.com/" class="logo"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/logo.svg" /></a>
+		
+			<div class="header-right-mobile visible-md-inline-block visible-md-inline-block visible-sm-inline-block visible-xs-inline-block">
+				<span class="text">
+					
+						
+						
+						
+						GAMES
+					
+				</span>
+				<div id="hamburger" class="hamburger">
+					<i class="icon-bar"></i>
+				</div>
+			</div>
+			<div id="shadow" class="shadow hidden-md hidden-sm hidden-xs"></div>
+		
+		<div id="headerMenus" class="header-right clear">
+			
+				
+					
+						<div class="signin">
+							<div class="header-overlay">
+								
+									<div class="switch-scores">
+										<span class="text">SCORES</span>
+										<span class="scores">
+										<span class="mask"></span>
+										<span class="circle"></span>
+									</span>
+									</div>
+									<a href="javascript:showSignIn();" class="user visible-md-inline-block visible-sm-inline-block visible-xs-inline-block"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/user.svg" /></a>
+								
+								<a href="javascript:showSignIn();" class="text">SIGN IN</a>
+							</div>
+						</div>
+					
+					
+				
+			
+			
+				<div class="menu">
+					<nav>
+						<span class="item"><a href="https://gamepass.nfl.com/schedule">GAMES</a></span>
+						<span class="item"><a href="https://gamepass.nfl.com/channel/nflnetwork">ORIGINALS</a></span>
+						<span class="item"><a href="https://gamepass.nfl.com/category/nfl-game-pass-film-session">FILM SESSION</a></span>
+						
+						<span class="item"><a href="https://gamepass.nfl.com/page/searchplays">SEARCH</a></span>
+						<span class="item dropdown-wrap"><a href="javascript:void(0);" class="dropdown-btn">&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+					</nav>
+				</div>
+			
+		</div>
+	</div>
+	<div class="drop-shadow shadow"></div>
+	<div class="dropdown-container">
+		<div class="container dropdown-content">
+				<div class="header-right clear">
+				<div class="menu">
+					<nav>
+						<span class="item"><a href="https://digitalcare.nfl.com/hc/en-us/categories/200275708-NFL-Game-Pass" target="_blank">SUPPORT</a></span>
+						<span class="item"><a href="https://gamepass.nfl.com/category/testimonials">TESTIMONIALS</a></span>
+					</nav>
+				</div>
+				</div>
+			</div>
+	</div>
+</header>
+	
+
+
+
+
+
+	
+	
+		
+		
+		
+		<div id="packagesContent">
+			
+				<div id="heroContainer">
+					<div id="heroVideo">
+						<div class="video-wrap">
+							<video autoplay="true" muted="true" loop="true" playsinline="true" poster="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/poster.png">
+								
+									
+									<source src="https://neulionms-a.akamaihd.net/nfl/promo/nflgp-promo-2017.mp4" type="video/mp4" />
+								
+							</video>
+						</div>
+						<div class="mask"></div>
+					</div>
+					<div id="heroContent">
+						<h1>Watch More Football</h1>
+						<div class="desc">Live out-of-market Preseason games and replays of every game.</div>
+						
+							
+								<a class="btn" href="javascript:selectPackage('DSEASON', '', 'pkg_DSEASON')">START YOUR FREE TRIAL</a>
+								<div class="desc" style="font-size:14px">Cancel anytime during your trial.</div>
+							
+							
+							
+							
+						
+					</div>
+				</div>
+			
+			<div id="packagesContainerOuter">
+				<a name="packages"></a>
+				<div id="packagesContainerInner">
+						<div class="package BDSEASON">
+							<div class="packageName">
+								<h2>NFL Game Pass</h2>
+										<div class="desc">Access live out-of-market Preseason games, replays of every game, the NFL Films Archive, and much more. Cancel anytime during your trial.</div>
+										<div class="avail">Subscription ends July 31, 2019.</div>
+											<div class="packageOptions">
+												<div><input type="radio" name="package_DSEASON" class="pkgradio" value="DSEASON&amp;nofreetrial=true" id="pkg_DSEASON_nofreetrial" onchange="packageOptionChange('price_DSEASON_nofreetrial','price_DSEASONI','price_DSEASON')" /><label for="pkg_DSEASON_nofreetrial"><div class="radiobtn">One Time Payment</div></label></div>
+												<div><input type="radio" name="package_DSEASON" class="pkgradio" value="DSEASONI&amp;nofreetrial=true" id="pkg_DSEASONI" onchange="packageOptionChange('price_DSEASONI','price_DSEASON','price_DSEASON_nofreetrial')" /><label for="pkg_DSEASONI"><div class="radiobtn">4 Installments</div></label></div>
+												<div><input type="radio" name="package_DSEASON" class="pkgradio" value="DSEASON" id="pkg_DSEASON" checked="true" onchange="packageOptionChange('price_DSEASON','price_DSEASONI','price_DSEASON_nofreetrial')" /><label for="pkg_DSEASON"><div class="radiobtn">Free Trial</div></label></div>
+											</div>
+											<div class="packagePrice" id="price_DSEASON_nofreetrial" style="display:none">
+												<div class="packagePriceAmount">USD&#x0024;99.99</div>
+												<a href="javascript:selectPackage('DSEASON&amp;nofreetrial=true', '', 'pkg_DSEASON_nofreetrial')" class="btn">SUBSCRIBE NOW</a>
+											</div>
+											<div class="packagePrice" id="price_DSEASONI" style="display:none">
+												<div class="packagePriceAmount">USD&#x0024;29.99<span>/INST.</span></div>
+												<a href="javascript:selectPackage('DSEASONI&amp;nofreetrial=true', '', 'pkg_DSEASONI')" class="btn">SUBSCRIBE NOW</a>
+											</div>
+											<div class="packagePrice" id="price_DSEASON">
+												<div class="packagePriceAmount">USD&#x0024;99.99</div>
+												<a href="javascript:selectPackage('DSEASON', '', 'pkg_DSEASON')" class="btn">START FREE TRIAL</a>
+												<div class="desc" style="padding-top:5px">Cancel anytime during your trial.</div>
+											</div>
+						</div>
+						<a href="https://NFLST.DIRECTV.COM/GAMEPASS?CMP=VUC-P2-GN-WBV-G-10072216_01" target="_blank">
+							<div id="dtvContainer">
+								<div style="margin:auto">
+									<div style="display:inline-block;min-height:60px"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/sundayticket.png" /></div>
+									<div style="display:inline-block;min-height:60px;vertical-align:middle">
+										<div class="desc" style="padding-top:10px">Get a special offer and watch LIVE out-of-market games when you add <span>NFL Game Pass</span> to your purchase of <span>NFLSUNDAYTICKET.TV MAX</span></div>
+										<div class="disclaimer" style="font-size:smaller;padding-top:5px">Eligibility requirements and other conditions apply. New NFL Game Pass users only.</div>
+									</div>
+								</div>
+							</div>
+						</a>
+				</div>
+			</div>
+			
+				<div id="blackoutCheck">
+					<div class="blackoutCheck">
+						<div class="blackout-game-content">
+							<div class="content">
+								<h2>Blackout Restrictions</h2>
+								<div class="sub-name">Due to national and local broadcast restrictions, some games may not be available to watch live in NFL Game Pass.</div>
+							</div>
+							<!--<div class="expand" data-inited="false">
+								<span class="text hidden-xs">LEARN MORE</span>
+								<i class="icon arrow-down"></i>
+							</div>-->
+						</div>
+						<div class="blackout-game-logos">
+							<div class="title">Your Local Team Games Will Not Be Available Live</div>
+							<div id="blackoutCheckLogos" class="logos"></div>
+						</div>
+						<div>
+							<a id="showBlackoutGames" href="javascript: void(0);" class="links">See All Blackouts</a>
+						</div>
+						<ul class="blackout-game-list">
+							<li class="title hidden-xs">
+								<span class="name col-lg-3 col-md-3 col-sm-3">DATE</span>
+								<span class="name col-lg-3 col-md-3 col-sm-3">AWAY</span>
+								<span class="name col-lg-3 col-md-3 col-sm-3">HOME</span>
+								<span class="name col-lg-3 col-md-3 col-sm-3">REASON UNAVAILABLE</span>
+							</li>
+						</ul>
+						<script id="blackoutGamesTemplate" type="text/x-handlebars-template">
+							{{#each items}}
+								{{#if isGame}}
+									<li class="info game">
+										<span class="date col-lg-3 col-md-3 col-sm-3 col-xs-12">{{date}}</span>
+										<span class="team away col-lg-3 col-md-3 col-sm-3 col-xs-12">{{away}}</span>
+										<span class="team home col-lg-3 col-md-3 col-sm-3 col-xs-12">{{home}}</span>
+										<span class="desc col-lg-3 col-md-3 col-sm-3 col-xs-12">{{blackoutStation}}</span>
+									</li>
+								{{else}}
+									<li class="info liveevent">
+										<span class="date col-lg-3 col-md-3 col-sm-3 col-xs-12">{{date}}</span>
+										<span class="team col-lg-6 col-md-6 col-sm-6 col-xs-12">{{name}}</span>
+										<span class="desc col-lg-3 col-md-3 col-sm-3 col-xs-12">{{blackoutStation}}</span>
+									</li>
+								{{/if}}
+							{{/each}}
+						</script>
+					</div>
+				</div>
+			
+			
+
+
+
+
+
+
+	<div id="featuresContainer">
+		<a name="features"></a>
+		<div class="feature middle" id="feature1">
+			<h2>The NFL Game Pass Playbook</h2>
+			<div class="desc">Get unprecedented access to every play, of every game, all year long.</div>
+		</div>
+		
+		<div class="feature" id="feature2">
+			<div class="text">
+				<h2>Live Out-of-Market Preseason Games</h2>
+				<div class="desc">Before the division battles heat up, the roster spot battles begin.</div>
+				<!-- <a href="#packages" class="btn">START FREE TRIAL</a> -->
+			</div>
+			<div class="text">
+			<h2>Live Out-of-Market Preseason Games</h2>
+				<div class="desc">Before the division battles heat up, the roster spot battles begin.</div>
+		</div>
+		
+		<div class="feature" id="feature3">
+			<div class="img" style="text-align:left"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/video.png" /></div>
+			<div class="text">
+				<h2>Replay Every Game, All Season</h2>
+				<div class="desc">Relive the game exactly like you'd watch on Sunday with the broadcast view.<br/>Want more than just the highlights, but don't have time for the full broadcast? Watch a Condensed Game in ~45 minutes.<br/>Watch tape like the pros with Coaches Film, which shows all 22 players in one view. </div>
+				<a href="#packages" class="btn">START FREE TRIAL</a>
+			</div>
+		</div>
+		<div class="feature" id="feature4">
+			<div class="text">
+				<h2>NFL Films Archive</h2>
+				<div class="desc">Want to relive some of the NFL's greatest moments? NFL Game Pass gives you access to classic shows, including previous seasons of Hard Knocks, A Football Life, and Sound FX. Have fun binging!<br/><br/>Check out all available shows <a href="/channel/nflnetwork">here</a></div>
+				<a href="#packages" class="btn">START FREE TRIAL</a>
+			</div>
+			<div class="img" style="text-align:right"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/nfln_domestic.png" /></div>
+		</div>
+	</div>
+	<div id="featureTilesContainer" class="clear">
+		<div class="featureTile" id="featureTile1">
+			<div class="img" id="featureTileCoach"></div>
+			<div class="text">
+				<h2>Coaches Film</h2>
+				<div class="desc">Watch exclusive All-22 and Endzone angle footage that pros, GMs, scouts, and broadcasters from around the league use.</div>
+			</div>
+		</div>
+		<div class="featureTile" id="featureTile2">
+			<div class="img" id="featureTileCondensed"></div>
+			<div class="text">
+				<h2>Condensed Games</h2>
+				<div class="desc">See every snap, from every game. Watch a condensed game in around 45 minutes.</div>
+			</div>
+		</div>
+		
+		<div class="featureTile" id="featureTile4">
+			<div class="img" id="featureTileSearch"></div>
+			<div class="text">
+				<h2>Player Search</h2>
+				<div class="desc">Utilize multiple search criteria to curate a playlist and filter plays down to exact in-game situations. Search by: player, down, redzone plays, and more.</div>
+			</div>
+		</div>
+		<div class="featureTile" id="featureTile5">
+			<div class="img" id="featureTileAudio"></div>
+			<div class="text">
+				<h2>Live Hometown Audio</h2>
+				<div class="desc">Feel the hometown advantage even when you're away. Listen to the localized radio feed of your favorite team when you're on the go.</div>
+			</div>
+		</div>
+	</div>
+	<div id="devicesContainer">
+		<div class="break"></div>
+		<a name="devices"></a>
+		<h1>Ways To Watch</h1>
+		<div class="desc">From here on out, the games go where you go. NFL Game Pass is available across devices. Never miss a snap!</div>
+		<div class="img" id="devicesImg"></div>
+		<div class="desc">Watch on your smart phone or tablet with the NFL app.</div>
+		<div id="appStoresContainer">
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton" target="_blank"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/appstorews.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton" target="_blank"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/appstoreios.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton" target="_blank"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/appstoregp.png" border="0" /></a>
+		</div>
+		<div class="desc">Watch on your Connected TV device via the NFL app on these platforms:</div>
+		<div id="platformsContainer">
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/cedxbox.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/cedappletv.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/cedps.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/cedroku.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/cedfiretv.png" border="0" /></a>
+			<a href="http://nfl.com/m/gp?icampaign=gamepass-free-mobileweb-confirm-appstorebutton"><img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/packages/cedandroidtv.png" border="0" /></a>
+		</div>
+		<div class="desc">NFL Game Pass compatible with Google Chromecast</div>
+	</div>
+
+<div id="disclaimerContainer">
+	<div id="disclaimer">NFL Game Pass does not include live regular season, playoff, or Super Bowl game broadcasts. Access to these games is available within NFL Game Pass on an on-demand basis in the NFL Game Pass archives. Audio feeds may be subject to availability. 2009 Preseason games are not available. NFL Game Pass is only available to users within the United States, Bermuda, Antigua, the Bahamas, and any U.S. territories, possessions and commonwealths (including American Samoa, Guam, Puerto Rico and the US Virgin Islands). For a full description of features, requirements, limitations, and other information, visit our FAQ at <a href="http://NFL.com/help/GamePass" target="_blank">NFL.com/help/GamePass</a></div>
+</div>
+		</div>
+	
+	
+
+	
+
+
+
+
+
+<footer>
+	
+	<section class="container footer-down">
+		<div class="footer-down-up clear">
+			<ul class="footer-nav">
+				<li class="item"><a href="https://digitalcare.nfl.com/hc/en-us/categories/200275708-NFL-Game-Pass" target="_blank">FAQs and Support</a></li>
+				
+					
+						<li class="item"><a href="http://www.nfl.com/contact-us" target="_blank">Contact Us</a></li>
+						<li class="item"><a href="http://www.nfl.com/help/subscriptions_terms" target="_blank">Terms & Conditions</a></li>
+					
+					
+				
+				<li class="item"><a href="http://www.nfl.com/help/privacy" target="_blank">Privacy Policy</a></li>
+			</ul>
+			<div class="footer-language">
+				<div id="footerLanguage" class="dropdown footer-language-dorpdown" data-toggle="popupDismissEveryWhere" data-target="#languageList" data-toggle-class="open">
+					
+					<div class="current">
+						<img src="https://neulionms-a.akamaihd.net/nfl/gamepass/v2/nflgp/site_4/images/footer_en.svg" class="language-img en"/>
+						
+						<span class="text">English</span>
+						<i class="arrow arrow-down"></i>
+					</div>
+					<ul id="languageList" class="list">
+						
+							
+							
+								
+									<li class="item selected"><span class="text">English</span></li>
+								
+								
+							
+						
+							
+							
+								
+								
+									<li class="item"><a class="extend-menu-item menu-drop-down" data-track="page" data-type="language" data-id="es_ES" href="javascript:invokeSyncCall('/service/prefupdate/','localeupdate','locale=es_ES',invokeSyncCallbackChangeLocale)"><span class="text">Español</span></a> </li>
+								
+							
+						
+							
+							
+								
+								
+									<li class="item"><a class="extend-menu-item menu-drop-down" data-track="page" data-type="language" data-id="ja_JP" href="javascript:invokeSyncCall('/service/prefupdate/','localeupdate','locale=ja_JP',invokeSyncCallbackChangeLocale)"><span class="text">&#26085;&#26412;</span></a> </li>
+								
+							
+						
+							
+							
+								
+								
+									<li class="item"><a class="extend-menu-item menu-drop-down" data-track="page" data-type="language" data-id="ko_KR" href="javascript:invokeSyncCall('/service/prefupdate/','localeupdate','locale=ko_KR',invokeSyncCallbackChangeLocale)"><span class="text">&#54620;&#44397;&#50612;</span></a> </li>
+								
+							
+						
+							
+							
+								
+								
+									<li class="item"><a class="extend-menu-item menu-drop-down" data-track="page" data-type="language" data-id="pt_BR" href="javascript:invokeSyncCall('/service/prefupdate/','localeupdate','locale=pt_BR',invokeSyncCallbackChangeLocale)"><span class="text">Português</span></a> </li>
+								
+							
+						
+							
+							
+								
+								
+									<li class="item"><a class="extend-menu-item menu-drop-down" data-track="page" data-type="language" data-id="zh_CN" href="javascript:invokeSyncCall('/service/prefupdate/','localeupdate','locale=zh_CN',invokeSyncCallbackChangeLocale)"><span class="text">&#20013;&#25991;</span></a> </li>
+								
+							
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-down-down copyright">
+			&copy; 2018 NFL Enterprises LLC. NFL and the NFL shield design are registered trademarks of the National Football League.The team names, logos and uniform designs are registered trademarks of the teams indicated. All other NFL-related trademarks are trademarks of the National Football League. NFL footage &copy; NFL Productions LLC.
+		</div>
+	</section>
+</footer>
+
+	
+
+
+
+
+
+	
+	
+	
+	
+
+	<div id="overlay" class="overlay"></div>
+	<div id="overlayWrap" class="overlayWrap">
+		<div id="overlaySignIn" class="modalOverlay overlaySignIn">
+			<iframe id="signInFrame" frameborder="0" border="0" width="100%" height="100%"></iframe>
+			<a href="javascript:hideSignIn();" class="close hamburger open"><i class="icon-bar"></i></a>
+		</div>
+	</div>
+	<div id="overlayPrompt" class="modalOverlay overlayPrompt">
+		<div id="overlayPromptDesc" class="desc"></div>
+		<div class="button">
+			<a href="javascript:cancelPrompt();" class="ok">OK</a>
+		</div>
+	</div>
+	<div id="overlayPCM" class="modalOverlay overlayPrompt">
+		<div class="desc">
+			Your account is being used to stream NFL Game Pass on a different device.  Click "OK" to continue watching on this device.
+		</div>
+		<div class="button">
+			<a href="javascript:PCMConfirm();" class="ok">OK</a>
+			<a href="javascript:cancelPrompt('PCM');" class="cancel">CANCEL</a>
+		</div>
+	</div>
+	<div id="overlayUpSell" class="modalOverlay overlayPrompt">
+		<div class="desc">
+			This feature requires Season Plus subscription.<br/>Please upgrade to Season Plus.
+		</div>
+		<div class="button">
+			<a href="javascript:upSellConfirm();" class="ok">UPGRADE</a>
+			<a href="javascript:cancelPrompt('UpSell');" class="cancel">CANCEL</a>
+		</div>
+	</div>
+	<div style="display:none">
+		<span id="msg_am">AM</span>
+		<span id="msg_pm">PM</span>
+		<span id="msg_timezone">ET</span>
+		<span id="msg_month_abbr">JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC</span>
+		<span id="msg_month_abbr_full">JANUARY,FEBRUARY,MARCH,APRIL,MAY,JUNE,JULY,AUGUST,SEPTEMBER,OCTOBER,NOVEMBER,DECEMBER</span>
+		<span id="msg_day_abbr">SUN,MON,TUE,WED,THU,FRI,SAT</span>
+		<span id="msg_day">Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday</span>
+		<span id="msg_time_format">h:mma z</span>
+		<span id="msg_time_format_day">EEE h:mma z</span>
+		<span id="msg_date_format_short">MMM d, yyyy</span>
+		<span id="msg_date_format_full">EEEE MMM d, yyyy</span>
+		<span id="msg_date_format_day">EEEE MMM d</span>
+		<span id="msg_datetime_format">EEEE, MMM d, h:mma z</span>
+		<span id="msg_unsupported">This video cannot be played on your device. Please review the System Requirements at <a href="http://NFL.com/help/GamePass" class="link" target="_blank">NFL.com/help/GamePass</a></span>
+		<span id="msg_video_unsupported_safari">This video cannot be played on your device. When using Safari, please ensure cookies are enabled in settings under Safari > Preferences > Privacy. Please review the System Requirements at <a href="http://NFL.com/help/GamePass" class="link" target="_blank">NFL.com/help/GamePass</a></span>
+	</div>
+	<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>
